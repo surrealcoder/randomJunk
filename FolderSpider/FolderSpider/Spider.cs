@@ -29,8 +29,8 @@ namespace FolderSpider
         public void indexer(string path)
         {
             x++;
-            Console.WriteLine(path);
-
+            //Console.WriteLine(path);
+            Console.WriteLine(x);
             ZetaLongPaths.ZlpDirectoryInfo di = new ZetaLongPaths.ZlpDirectoryInfo(path);
             ZetaLongPaths.ZlpFileInfo[] flist = di.GetFiles();
             for (int i = 0; i < flist.Length; i++)
@@ -42,7 +42,7 @@ namespace FolderSpider
             }
             ZetaLongPaths.ZlpDirectoryInfo[] dlist = di.GetDirectories();
   
-            Console.WriteLine("recurse: " + dlist.Length);
+            //Console.WriteLine("recurse: " + dlist.Length);
             for (int i = 0; i < dlist.Length; i++)
             {
                 // insert each directory into SQL
